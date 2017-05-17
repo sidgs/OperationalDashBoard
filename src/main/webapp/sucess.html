@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Successful Login</title>
+    <link rel="stylesheet" href="/resources/bower_components/pure/pure.css">
+    <link rel="stylesheet" href="/resources/bower_components/pure/grids-responsive.css">
+    <link rel="stylesheet" href="/resources/public/css/pure-theme.css">
+    <link rel="stylesheet" href="/resources/public/css/calories-tracker.css">
+    <link rel="stylesheet" href="/resources/css/jquery.datetimepicker.css">
+</head>
+<body class="pure-skin-theme" id="ODPApp" ng-controller="UserCtrl">
+
+<div class="please-wait-dialog" ng-hide="vm.appReady">
+    <img class="please-wait-spinner" src="/resources/img/loading.gif">
+</div>
+
+<header class="page-header pure-g not-ready" ng-class="{'app-ready': vm.appReady}">
+    <div class="pure-u-lg-1-2 pure-u-1">
+
+        <a class="pure-menu-heading" href="#">
+            <img class="logo" src="/resources/img/logo.png">
+        </a>
+
+    </div>
+    <div class="pure-u-lg-1-2 pure-u-1 utilities">
+        
+        <div class="header-element username">
+            <div class="username-placeholder" ng-hide="vm.userName"></div>
+            <span ng-cloak>{{vm.userName}}</span>
+        </div>
+        <div class="header-element">
+            <a class="logout" href="#" ng-click="logout()">Logout</a>
+        </div>
+    </div>
+</header>
+
+<h1>  Successfull Login </h1>
+<script type="text/javascript" data-main="/resources/js/odp"
+        src="/resources/bower_components/requirejs/require.js"></script>
+
+</body>
+</html>
